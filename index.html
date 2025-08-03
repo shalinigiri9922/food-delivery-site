@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodwebsite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-----------------side-navbar----------------->
+        <div class="side-navber">
+            <i class="fa-solid fa-bars"></i>
+
+          <div class="design"> 
+             <a href="">material </a> 
+             <a href="" >design </a> 
+             <a href="">process</a> 
+          </div>
+
+        </div>
+<!---top navbar ----->
+        <div class="top-navber"> 
+            <div class="top">
+                <a href="#"> shop </a>
+                <a href="#"> features </a>
+                <a href="#"> Recipes </a>
+                <a href="#"> Hotline </a>
+            </div>
+
+
+            <div class="icons">
+              <a href="" > <i class="fa-solid fa-cart-shopping"></i></a>
+              <img src="logo2.png" alt="">
+              <div class="theme-switch"> 
+                <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                <label for="theme-switch" class="theme-switch-label">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </label>
+              </div>
+            </div>
+        </div>
+
+        <!----------food------------>
+        <div class="food">
+            <div class="foodbar">
+                 <span>foodbar</span>
+                 <img src="img2.png" alt="" id=""foodbar-img>
+            </div>
+
+            <div class="order">
+                <h1> healthy salad</h1>
+                <p> salad is nutritionaly complete food that contain all 27 essential vitamins </p>
+                <span class="anker">$28 </span>
+                <span class="sp">Discount 50%</span>
+                <a href="" class="btn">order now</a>
+             </div>
+                
+            
+        </div>
+<!----------------------footer--------------------->
+<div class="footer">
+  <div class="images">
+    <img src="img2.png" alt="Aspargus wild salad" class=""item-img>
+    <span>$23</span>
+    <p> Aspargus wild</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div>
+    <a href="#"><i class="fa-solid" fa-cart-plus></i> </a>
+  </div> 
+  
+  <div class="images">
+    <img src="img1.png" alt=" lime Aspargus salad" class=""item-img>
+    <span>$65</span>
+    <p>Lime Aspargus Salad </p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div>
+    <a href="#"><i class="fa-solid" fa-cart-plus></i> </a>
+  </div> 
+    <div class="images">
+        <img src="img3.png" alt="Zucchini salad " class=""item-img>
+        <span>$56</span>
+        <p>Zucchini salad</p>
+        <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+        </div>
+        <a href="#"><i class="fa-solid" fa-cart-plus></i> </a>
+
+      <div class="images">
+    <img src="img4.png" alt="green salad " class=""item-img>
+    <span>$53</span>
+    <p> Green Bean Salad </p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div>
+    <a href="#"><i class="fa-solid" fa-cart-plus></i> </a>
+  </div> 
+</div>
+
+<!----------------social-------------------->
+ <div class="social">
+    <a href=""> <i class="fa-brands fa-square-instagram"></i></a>
+    <a href=""> </a>
+    <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
+    <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
+    <a href=""> <i class="fa-brands fa-square-github"></i></a>
+    <a href=""> <i class="fa-brands fa-square-linkedin"></i></a>
+    <a href=""><i class="fa-brands fa-google"></i></a>
+ </div>
+</header>
+<script>
+  const addToCartButtons = document.querySelectorAll(' .images a');
+
+  const cartIcon = document.QuerySelector('top-navber .icons a i');
+
+  let cartCount= 0;
+  addToCartButtons.forEach(button =>{
+    cartCount++
+    cartIcon.textcontent=cartCount;
+
+  });
+
+  // change itms
+ const footerImages = document.querySelectorAll('.footer .images');
+
+ const foodbarImage = document.querySelector('.foodbar img');
+
+ footerImages.forEach(image=>{
+  image.addEventlistener('click',()=>{
+    foodbarImage.src = image.src;
+  });
+ });
+  
+  
+//  remove animation
+constcitemImages = document.querySelectorAll('.footer .images img');
+itemImages.forEach(img=>{
+  img.addEventListener('click',()=>{
+    itemsImages.forEach(img=> img.ClassList.remove('animated'));
+    img.classList.add('animated');
+  });
+
+});
+
+  //  Toggle  light Dark Mode
+  const themeswitch = document.getElementById('theme-switch');
+  const body = document.body;
+  themeswitch.addEventListener('change', function() {
+      body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>
